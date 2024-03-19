@@ -1,0 +1,6 @@
+Set-ExecutionPolicy RemoteSigned              #changes PowerShell execution policies for Windows computers
+Install-Module exchangeonlinemanagement      #Install exchange online modules
+Import-Module exchangeonlinemanagement       #Import exchange online modules
+Connect-ExchangeOnline                       #connect to exchange online service
+Get-MailboxFolderStatistics -Identity "user@domain.com" -FolderScope RecoverableItems | Format-Table Name, FolderAndSubfolderSize, ItemsInFolderAndSubfolders -Auto
+
